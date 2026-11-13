@@ -40,7 +40,7 @@
 
 <section id="en" lang="en">
 <h1>Privacy Policy</h1>
-<p class="meta">for the Android game “Nonsensor: Phone Puzzles” (package <code>com.seismicdrop.nonsensor</code>)<br>Last updated: 12 November 2026</p>
+<p class="meta">for the Android game “Nonsensor: Phone Puzzles” (package <code>com.seismicdrop.nonsensor</code>)<br>Last updated: 13 November 2026</p>
 
 <h2>1. Who is responsible</h2>
 <address>
@@ -54,13 +54,15 @@ E-mail: <a href="mailto:support@seismicdrop.com">support@seismicdrop.com</a>
 <h2>2. In short</h2>
 <ul>
   <li>Nonsensor needs no account.</li>
-  <li>The game asks for no permission you would have to confirm: no microphone, no camera, no location, no contacts.</li>
+  <li>The game asks for no permission you would have to confirm: no microphone, no camera, no location, no contacts. The one exception: if you turn on the daily puzzle reminder in the settings, Android asks once whether the game may send you notifications (from Android 13). The reminder works entirely on your device and sends nothing.</li>
   <li>Whatever your phone’s sensors measure (orientation, motion, light, proximity) and whatever settings the game reads (volume, brightness, dark mode, charging state, airplane mode, time) is evaluated on your device only, to solve puzzles. These values are neither stored nor transmitted.</li>
-  <li>Data leaves your device only through the Google services built into the game: advertising, purchases and, if you sign in, Google Play Games.</li>
+  <li>Data leaves your device through the Google services built into the game: advertising, purchases and, if you sign in, Google Play Games.</li>
+  <li>The game itself fetches new levels and settings from a web space, and, only if you agree, sends anonymous counters. It never sends an identifier of you or your phone.</li>
 </ul>
 
 <h2>3. What is stored on your device</h2>
 <p>Your save (solved levels, sparks, settings, skins) lives in the app’s private storage on your device. It is removed when you uninstall the app or clear its data. If Android’s device backup is enabled, the save may be part of that backup in your Google account.</p>
+<p>The game also keeps there the levels and settings it has fetched (section 7). If you take part in anonymous counting (section 8), it keeps the counters still waiting to be sent, a note of what has already been counted so that nothing is counted twice, and the variant drawn for your installation. None of this is an identifier, and it is not part of the device backup.</p>
 
 <h2>4. Advertising (Google AdMob)</h2>
 <p>The game shows ads through Google AdMob, a service of Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. Ads appear no earlier than after the tenth solved level. Where the law requires it, we ask for your choice through Google’s consent platform before the first ad.</p>
@@ -74,33 +76,51 @@ E-mail: <a href="mailto:support@seismicdrop.com">support@seismicdrop.com</a>
 <h2>6. Google Play Games (optional)</h2>
 <p>If you are signed in to Google Play Games, the game sends unlocked achievements, leaderboard values (streak, lights, daily puzzle time) and, if you use the backup, your save to your Google account. Google also processes your Play Games player ID and gamer profile (name, avatar) and collects analytics and diagnostic data about its games software. None of this happens without signing in. You can delete this data in your Play Games profile. Legal basis: your consent by signing in (Art. 6(1)(a) GDPR).</p>
 
-<h2>7. Other technical processes</h2>
+<h2>7. New levels and settings (GitHub Pages)</h2>
+<p>So that new levels and corrections reach you without an app update, the game fetches a small signed package from a web space at GitHub Pages when it starts, at most every six hours. GitHub Pages is a service of GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. The request contains no identifier of you or your phone and no cookies. As with every request on the internet, GitHub receives your IP address and may log it to keep its service secure. The game checks a digital signature before it uses anything from the package.</p>
+<p>The package can also carry settings of the game, such as the price of a hint in sparks or the pause between two ads. Ads can never become more frequent this way than in the version you installed.</p>
+<p>Legal basis: our legitimate interest in keeping the game up to date and fixing errors quickly (Art. 6(1)(f) GDPR). More information: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub’s privacy statement</a>.</p>
+
+<h2>8. Counting anonymously (optional)</h2>
+<p>Before your first daily puzzle the game asks once whether it may count anonymously. Only if you agree does it send counters to a database we run at Google Firebase (Firebase Realtime Database, a service of Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland). The database is located in Belgium.</p>
+<p>What is counted:</p>
+<ul>
+  <li>for each level: that it was opened for the first time, solved for the first time, solved with a paid hint, or skipped;</li>
+  <li>for the daily puzzle: that it was started and that it was solved, at most once a day;</li>
+  <li>when we compare two variants of a setting (for example two prices for a hint): how often levels were solved, hints opened, ads shown and purchases made in the variant your installation was randomly drawn into, and on how many days the game was opened there.</li>
+</ul>
+<p>Each transmission says nothing but “this counter plus one”. It contains no identifier of you, your phone or your installation, no advertising ID, no time and no order of events; the database holds only sums. Which variant was drawn for your installation is stored on your phone only. Technically your IP address is transmitted, as with every request on the internet; the game neither stores it nor links it to the counters.</p>
+<p><strong>Withdrawing your consent:</strong> you can switch counting off at any time in the game under Settings, Privacy, “Count anonymously”. Counters still waiting on your phone are then deleted without being sent. Sums that have already been counted cannot be traced back to you and therefore cannot be removed one by one.</p>
+<p><strong>The solve rate:</strong> the daily puzzle shows what share of players solved it today, once at least 20 have started it. For this the game reads two numbers from the same database, at most every 30 minutes, whether or not you take part in counting. The request names only the day. Nothing about you is sent, apart from the IP address that every request carries.</p>
+<p>Legal basis: your consent for counting (Art. 6(1)(a) GDPR); our legitimate interest in showing the solve rate (Art. 6(1)(f) GDPR).</p>
+
+<h2>9. Other technical processes</h2>
 <ul>
   <li><strong>Rating:</strong> the game may open Google Play’s review dialog. The app does not learn whether or what you rate.</li>
   <li><strong>Shared puzzle cards:</strong> when you share a puzzle card, the game hands an image and a link to the app you choose. If someone installs the game through such a link, it reads once which level to open, as passed along by Google Play. This contains no personal data.</li>
   <li><strong>Reporting a problem:</strong> through “This level is broken” you can send us an e-mail. It contains the level ID, the app version, the device model, the Android version and the list of available sensors. You see the text before sending and decide yourself whether to send it. We use your message and your e-mail address only to answer you and to fix the problem, and delete them once the matter is settled.</li>
 </ul>
 
-<h2>8. Storage period, deletion and security</h2>
-<p>We do not operate servers for this game and do not store personal data about you ourselves, apart from e-mails you send us. Data processed by Google is stored according to Google’s own retention rules; you can manage it in your Google account, in your Play Games profile and in the ad settings of your device. All data that Google’s software in the app transmits is encrypted in transit.</p>
+<h2>10. Storage period, deletion and security</h2>
+<p>We store no personal data about you ourselves, apart from e-mails you send us. The web space for new levels only delivers files, and the counter database holds only sums that cannot be traced to anyone (section 8). Data processed by Google is stored according to Google’s own retention rules; you can manage it in your Google account, in your Play Games profile and in the ad settings of your device. Everything the game and Google’s software in the app transmit is encrypted in transit.</p>
 <p>Step-by-step instructions: <a href="delete.html#en">How to delete your data</a>.</p>
 
-<h2>9. Transfers outside the EU</h2>
-<p>Google may process data in the United States and other countries. Google relies on the EU-US Data Privacy Framework and on standard contractual clauses.</p>
+<h2>11. Transfers outside the EU</h2>
+<p>Google and GitHub may process data in the United States and other countries. Both rely on the EU-US Data Privacy Framework and on standard contractual clauses.</p>
 
-<h2>10. Children</h2>
+<h2>12. Children</h2>
 <p>Nonsensor is intended for people aged 13 and over and is not directed at children.</p>
 
-<h2>11. Your rights</h2>
+<h2>13. Your rights</h2>
 <p>You have the right of access, rectification, erasure, restriction of processing, data portability and objection, and the right to withdraw consent at any time. You can also lodge a complaint with a data protection authority. To exercise your rights, write to us at the address above.</p>
 
-<h2>12. Changes</h2>
+<h2>14. Changes</h2>
 <p>When the game changes, we update this policy. The current version is always on this page.</p>
 </section>
 
 <section id="de" lang="de">
 <h1>Datenschutzerklärung</h1>
-<p class="meta">für das Android-Spiel „Nonsensor: Handy-Rätsel“ (Paket <code>com.seismicdrop.nonsensor</code>)<br>Stand: 12. November 2026</p>
+<p class="meta">für das Android-Spiel „Nonsensor: Handy-Rätsel“ (Paket <code>com.seismicdrop.nonsensor</code>)<br>Stand: 13. November 2026</p>
 
 <h2>1. Wer verantwortlich ist</h2>
 <address>
@@ -114,13 +134,15 @@ E-Mail: <a href="mailto:support@seismicdrop.com">support@seismicdrop.com</a>
 <h2>2. Das Wichtigste in Kürze</h2>
 <ul>
   <li>Nonsensor braucht kein Konto.</li>
-  <li>Das Spiel verlangt keine Berechtigung, die du bestätigen müsstest: kein Mikrofon, keine Kamera, kein Standort, keine Kontakte.</li>
+  <li>Das Spiel verlangt keine Berechtigung, die du bestätigen müsstest: kein Mikrofon, keine Kamera, kein Standort, keine Kontakte. Die einzige Ausnahme: Schaltest du in den Einstellungen die Erinnerung ans Tagesrätsel ein, fragt Android einmal, ob das Spiel dir Benachrichtigungen schicken darf (ab Android 13). Die Erinnerung läuft ganz auf deinem Gerät und sendet nichts.</li>
   <li>Was die Sensoren deines Handys messen (Lage, Bewegung, Licht, Annäherung) und was das Spiel an Einstellungen ausliest (Lautstärke, Helligkeit, Dunkelmodus, Ladezustand, Flugmodus, Uhrzeit), wird nur auf deinem Gerät ausgewertet, um Rätsel zu lösen. Diese Werte werden nicht gespeichert und nicht übertragen.</li>
-  <li>Daten fließen nur über die eingebundenen Dienste von Google: Werbung, Käufe und, wenn du dich anmeldest, Google Play Games.</li>
+  <li>Daten fließen über die eingebundenen Dienste von Google: Werbung, Käufe und, wenn du dich anmeldest, Google Play Games.</li>
+  <li>Das Spiel selbst holt neue Level und Einstellwerte von einem Webspace und sendet, nur wenn du zustimmst, anonyme Zähler. Eine Kennung von dir oder deinem Handy sendet es nie.</li>
 </ul>
 
 <h2>3. Was auf deinem Gerät gespeichert wird</h2>
 <p>Dein Spielstand (gelöste Level, Funken, Einstellungen, Skins) liegt im privaten Speicher der App auf deinem Gerät. Er verschwindet, wenn du die App deinstallierst oder ihre Daten löschst. Ist bei dir die Gerätesicherung von Android eingeschaltet, kann der Spielstand Teil dieser Sicherung in deinem Google-Konto sein.</p>
+<p>Dort liegen auch die Level und Einstellwerte, die das Spiel geholt hat (Abschnitt 7). Wenn du anonym mitzählst (Abschnitt 8), liegen dort außerdem die Zähler, die noch aufs Senden warten, ein Vermerk, was schon gezählt ist, damit nichts doppelt zählt, und die Variante, in die deine Installation gelost wurde. Nichts davon ist eine Kennung, und nichts davon ist Teil der Gerätesicherung.</p>
 
 <h2>4. Werbung (Google AdMob)</h2>
 <p>Das Spiel zeigt Werbung über Google AdMob, einen Dienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Werbung erscheint frühestens nach dem zehnten gelösten Level. Vor der ersten Anzeige fragen wir in Ländern, in denen das vorgeschrieben ist, über die Einwilligungsplattform von Google nach deiner Entscheidung.</p>
@@ -134,27 +156,45 @@ E-Mail: <a href="mailto:support@seismicdrop.com">support@seismicdrop.com</a>
 <h2>6. Google Play Games (freiwillig)</h2>
 <p>Wenn du bei Google Play Games angemeldet bist, übermittelt das Spiel freigeschaltete Erfolge, Werte für die Bestenlisten (Serie, Lichter, Zeit für das Tagesrätsel) und, falls du die Sicherung nutzt, deinen Spielstand an dein Google-Konto. Google verarbeitet dabei auch deine Spieler-ID und dein Spielerprofil (Name, Avatar) und erhebt Analyse- und Diagnosedaten zu seiner Spiele-Software. Ohne Anmeldung geschieht nichts davon. Löschen kannst du diese Daten in deinem Play-Games-Profil. Rechtsgrundlage: deine Einwilligung durch die Anmeldung (Art. 6 Abs. 1 Buchst. a DSGVO).</p>
 
-<h2>7. Weitere technische Vorgänge</h2>
+<h2>7. Neue Level und Einstellwerte (GitHub Pages)</h2>
+<p>Damit neue Level und Korrekturen ohne App-Update bei dir ankommen, holt das Spiel beim Start, höchstens alle sechs Stunden, ein kleines signiertes Paket von einem Webspace bei GitHub Pages. GitHub Pages ist ein Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Der Abruf enthält keine Kennung von dir oder deinem Handy und keine Cookies. Wie bei jedem Abruf im Internet erhält GitHub dabei deine IP-Adresse und kann sie zur Sicherheit seines Dienstes protokollieren. Bevor das Spiel etwas aus dem Paket verwendet, prüft es eine digitale Signatur.</p>
+<p>Das Paket kann auch Einstellwerte des Spiels enthalten, etwa den Preis eines Hinweises in Funken oder den Abstand zwischen zwei Anzeigen. Werbung kann auf diesem Weg nie häufiger werden als in der Version, die du installiert hast.</p>
+<p>Rechtsgrundlage: unser berechtigtes Interesse, das Spiel aktuell zu halten und Fehler schnell zu beheben (Art. 6 Abs. 1 Buchst. f DSGVO). Mehr dazu: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>.</p>
+
+<h2>8. Anonym mitzählen (freiwillig)</h2>
+<p>Vor deinem ersten Tagesrätsel fragt das Spiel einmal, ob es anonym mitzählen darf. Nur wenn du zustimmst, sendet es Zähler an eine Datenbank, die wir bei Google Firebase betreiben (Firebase Realtime Database, ein Dienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Die Datenbank steht in Belgien.</p>
+<p>Gezählt wird:</p>
+<ul>
+  <li>je Level: dass es zum ersten Mal geöffnet, zum ersten Mal gelöst, mit einem bezahlten Hinweis gelöst oder übersprungen wurde;</li>
+  <li>beim Tagesrätsel: dass es begonnen und dass es gelöst wurde, höchstens einmal am Tag;</li>
+  <li>wenn wir zwei Varianten eines Einstellwerts vergleichen (zum Beispiel zwei Preise für einen Hinweis): wie oft in der Variante, in die deine Installation zufällig gelost wurde, Level gelöst, Hinweise geöffnet, Anzeigen gezeigt und Käufe getätigt wurden und an wie vielen Tagen das Spiel dort geöffnet war.</li>
+</ul>
+<p>Jede Übertragung sagt nichts als „dieser Zähler plus eins“. Sie enthält keine Kennung von dir, deinem Handy oder deiner Installation, keine Werbe-ID, keine Uhrzeit und keine Reihenfolge der Ereignisse; in der Datenbank stehen nur Summen. In welche Variante deine Installation gelost wurde, ist nur auf deinem Handy gespeichert. Technisch wird wie bei jedem Abruf im Internet deine IP-Adresse übertragen; das Spiel speichert sie nicht und verknüpft sie nicht mit den Zählern.</p>
+<p><strong>Einwilligung widerrufen:</strong> Du kannst das Mitzählen jederzeit im Spiel unter Einstellungen, Datenschutz, „Anonym mitzählen“ ausschalten. Zähler, die noch auf deinem Handy warten, werden dann gelöscht, ohne gesendet zu werden. Summen, die schon gezählt sind, lassen sich nicht auf dich zurückführen und deshalb auch nicht einzeln entfernen.</p>
+<p><strong>Die Lösungsquote:</strong> Das Tagesrätsel zeigt, welcher Anteil der Spieler es heute gelöst hat, sobald mindestens 20 es begonnen haben. Dafür liest das Spiel zwei Zahlen aus derselben Datenbank, höchstens alle 30 Minuten, gleich ob du mitzählst oder nicht. Der Abruf nennt nur den Tag. Über dich wird dabei nichts gesendet, abgesehen von der IP-Adresse, die jeder Abruf trägt.</p>
+<p>Rechtsgrundlage: deine Einwilligung für das Mitzählen (Art. 6 Abs. 1 Buchst. a DSGVO); unser berechtigtes Interesse, die Lösungsquote zu zeigen (Art. 6 Abs. 1 Buchst. f DSGVO).</p>
+
+<h2>9. Weitere technische Vorgänge</h2>
 <ul>
   <li><strong>Bewertung:</strong> Das Spiel kann den Bewertungsdialog von Google Play öffnen. Ob und was du bewertest, erfährt die App nicht.</li>
   <li><strong>Geteilte Rätselkarten:</strong> Wenn du eine Rätselkarte teilst, übergibt das Spiel ein Bild und einen Link an die App, die du auswählst. Installiert jemand das Spiel über so einen Link, liest es einmalig die von Google Play mitgegebene Angabe, welches Level geöffnet werden soll. Personenbezogene Daten enthält sie nicht.</li>
   <li><strong>Fehler melden:</strong> Über „Dieses Level ist kaputt“ kannst du uns eine E-Mail schicken. Sie enthält die Kennung des Levels, die Version der App, das Gerätemodell, die Android-Version und die Liste der vorhandenen Sensoren. Du siehst den Text vor dem Absenden und entscheidest selbst, ob du ihn schickst. Deine Nachricht und deine E-Mail-Adresse verwenden wir nur, um dir zu antworten und den Fehler zu beheben, und löschen sie, sobald die Sache erledigt ist.</li>
 </ul>
 
-<h2>8. Speicherdauer, Löschung und Sicherheit</h2>
-<p>Wir betreiben für dieses Spiel keine eigenen Server und speichern selbst keine personenbezogenen Daten über dich, abgesehen von E-Mails, die du uns schickst. Daten, die Google verarbeitet, werden nach den Regeln von Google gespeichert; verwalten kannst du sie in deinem Google-Konto, in deinem Play-Games-Profil und in den Werbeeinstellungen deines Geräts. Alle Daten, die Googles Software in der App überträgt, sind bei der Übertragung verschlüsselt.</p>
+<h2>10. Speicherdauer, Löschung und Sicherheit</h2>
+<p>Wir speichern selbst keine personenbezogenen Daten über dich, abgesehen von E-Mails, die du uns schickst. Der Webspace für neue Level liefert nur Dateien aus, und in der Zähler-Datenbank stehen nur Summen, die sich auf niemanden zurückführen lassen (Abschnitt 8). Daten, die Google verarbeitet, werden nach den Regeln von Google gespeichert; verwalten kannst du sie in deinem Google-Konto, in deinem Play-Games-Profil und in den Werbeeinstellungen deines Geräts. Alles, was das Spiel und Googles Software in der App übertragen, ist bei der Übertragung verschlüsselt.</p>
 <p>Schritt für Schritt: <a href="delete.html#de">So löschst du deine Daten</a>.</p>
 
-<h2>9. Übermittlung in Länder außerhalb der EU</h2>
-<p>Google kann Daten auch in den USA und in anderen Ländern verarbeiten. Google stützt sich dafür auf das EU-US Data Privacy Framework und auf Standardvertragsklauseln.</p>
+<h2>11. Übermittlung in Länder außerhalb der EU</h2>
+<p>Google und GitHub können Daten auch in den USA und in anderen Ländern verarbeiten. Beide stützen sich dafür auf das EU-US Data Privacy Framework und auf Standardvertragsklauseln.</p>
 
-<h2>10. Kinder</h2>
+<h2>12. Kinder</h2>
 <p>Nonsensor richtet sich an Personen ab 13 Jahren und nicht an Kinder.</p>
 
-<h2>11. Deine Rechte</h2>
+<h2>13. Deine Rechte</h2>
 <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das Recht, eine Einwilligung jederzeit zu widerrufen. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren. Schreib uns dazu an die oben genannte Adresse.</p>
 
-<h2>12. Änderungen</h2>
+<h2>14. Änderungen</h2>
 <p>Wenn sich das Spiel ändert, passen wir diese Erklärung an. Die jeweils aktuelle Fassung steht auf dieser Seite.</p>
 </section>
 
